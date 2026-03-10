@@ -1,0 +1,48 @@
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1a1a1a;
+}
+
+.home-hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.home-hero h1 {
+  font-size: 3rem;
+  margin: 0 0 0.5rem;
+  color: #b30000;
+  text-shadow: 2px 2px 0 #ffcc00;
+  letter-spacing: 1px;
+}
+
+.home-tagline {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0;
+  font-style: italic;
+}
+
+.home-about-game,
+.home-about-site {
+  margin-bottom: 2rem;
+}
+
+.home-about-game h2,
+.home-about-site h2 {
+  font-size: 1.6rem;
+  color: #b30000;
+  margin-bottom: 0.75rem;
+}
+
+.home-about-game p,
+.home-about-site p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
