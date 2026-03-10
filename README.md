@@ -1,3 +1,19 @@
+# Project Name: smash64fighters
+
+This project is meant to house information about the 12 playable characters in Super Smash Bros. 64.
+
+## Features
+
+Here's a list of features the site will have:
+1. a light and dark theme switcher
+2. an image carousel
+3. a nav bar
+4. a custom theme for each character
+
+## Tech Stack 
+
+React and Node.js
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
