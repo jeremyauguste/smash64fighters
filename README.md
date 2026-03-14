@@ -1,18 +1,30 @@
 # Project Name: smash64fighters
 
-This project is meant to house information about the 12 playable characters in Super Smash Bros. 64.
+This project is meant to house information about the characters, stages, and items in Super Smash Bros. for the Nintendo 64.
 
 ## Features
 
-Here's a list of features the site will have:
-1. a light and dark theme switcher
-2. an image carousel
-3. a nav bar
-4. a custom theme for each character
+• Sign Up, Login/Logout
+• Delete Account
+• Post/Delete Comments
+• Reply to Comments
+• Rate Comments
+• Choose Profile Picture
+• Change Username
+• View Other User's Profiles
+• Comment History (+relative time since comment was posted)
 
 ## Tech Stack 
 
-React and Node.js
+React, Node.js, Claude Code
+
+## What I've Learned
+
+Doing research before hand and gathering assets can be helpful to allow the AI to assist in creating more cohesive designs. A lot of my project was built on trying to recreate the UI of Smash 64, so online assets were really helpful. There were times when some images were read improperly, but iterating on what does work can still help create meaningful progress.
+
+## Architecture Overview
+
+The database I used for this project was Supabase. I was able to store authenticated user information, profile data, comment data, and comment rating data in tables to create the proper refences so that users could interact with each other. All the images I used are stored on the site.
 
 # Getting Started with Create React App
 
