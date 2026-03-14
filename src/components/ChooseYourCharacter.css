@@ -19,7 +19,7 @@
 .cyc-wrapper {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 1.5rem 2rem;
+  padding: 3.5rem 1.5rem 2rem;
   font-family: 'Rajdhani', sans-serif;
   color: var(--text-primary);
 }
@@ -224,4 +224,30 @@
   line-height: 1.75;
   color: var(--text-secondary);
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .cyc-wrapper {
+    padding: 3.5rem 1rem 2rem;
+  }
+
+  .cyc-content {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .cyc-image-area {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .cyc-image,
+  .cyc-image-placeholder {
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+  }
 }

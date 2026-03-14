@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Items.css';
 import BackButton from '../components/BackButton';
 import ItemRow from '../components/ItemRow';
+import CommentSection from '../components/CommentSection';
 
 const items = [
   {
@@ -149,6 +150,8 @@ function Items() {
           </div>
         </div>
       </div>
+
+      <CommentSection pageType="item" pageId="items" />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import './ChooseYourCharacter.css';
 import ImageGallery from './ImageGallery';
 import AttackList from './AttackList';
 import BackButton from './BackButton';
+import CommentSection from './CommentSection';
 
 const fighters = [
   {
@@ -687,6 +688,10 @@ function ChooseYourCharacter() {
           <h2 className="cyc-attacks-title">Attacks</h2>
           <AttackList attacks={current.attacks} />
         </div>
+      )}
+
+      {current && (
+        <CommentSection pageType="character" pageId={current.name} />
       )}
     </div>
   );

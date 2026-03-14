@@ -42,7 +42,7 @@ function Home() {
           </div>
         </div>
         <div className="home-info">
-          <p>A reference guide for the original <strong>Super Smash Bros. 64</strong> roster and stages. Browse all 12 fighters — their move sets, stats, and playstyles — or explore the 9 iconic stages drawn from across Nintendo's most beloved franchises.</p>
+          <p>A community reference guide for the original <strong>Super Smash Bros. 64</strong>. Browse all 12 fighters with tier rankings, move sets, and photo galleries. Explore all 9 stages and the full item roster. Create an account to leave comments, give kudos, and build your profile.</p>
         </div>
       </div>
     </div>

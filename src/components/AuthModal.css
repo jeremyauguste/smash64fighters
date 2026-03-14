@@ -1,0 +1,154 @@
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-modal {
+  background: #0d0d0d;
+  border: 2px solid #c8960c;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  padding: 1.75rem;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.auth-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.auth-modal-title {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #c8960c;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.auth-close {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.auth-close:hover {
+  color: #c8960c;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.auth-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.auth-input {
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.15s ease;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #c8960c;
+}
+
+.auth-error {
+  color: #e05555;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.auth-message {
+  color: #66bb6a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.auth-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  border: 2px solid #c8960c;
+  border-radius: 6px;
+  color: #c8960c;
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  margin-top: 0.25rem;
+}
+
+.auth-submit:hover:not(:disabled) {
+  background: #1a1400;
+}
+
+.auth-submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.auth-switch {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #888;
+  text-align: center;
+}
+
+.auth-switch-btn {
+  background: none;
+  border: none;
+  color: #c8960c;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-modal {
+    margin: 0 1rem;
+    padding: 1.25rem;
+  }
+}

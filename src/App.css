@@ -2,6 +2,65 @@
   box-sizing: border-box;
 }
 
+.auth-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: rgba(5, 5, 5, 0.92);
+  border-bottom: 2px solid #c8960c;
+  backdrop-filter: blur(6px);
+}
+
+.auth-bar-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.auth-bar-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #c8960c;
+  background: #000;
+  flex-shrink: 0;
+}
+
+.auth-bar-username {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #c8960c;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.auth-bar-btn {
+  background: #000;
+  border: 2px solid #c8960c;
+  border-radius: 6px;
+  color: #c8960c;
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  padding: 0.2rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.auth-bar-btn:hover {
+  background: #1a1400;
+}
+
 .home-bg {
   position: fixed;
   inset: 0;
@@ -72,3 +131,4 @@
     transform: translateX(0);
   }
 }
+

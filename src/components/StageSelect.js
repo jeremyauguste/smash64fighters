@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './StageSelect.css';
 import BackButton from './BackButton';
+import CommentSection from './CommentSection';
 
 const stages = [
   {
@@ -207,6 +208,10 @@ function StageSelect() {
           )}
         </div>
       </div>
+
+      {current && (
+        <CommentSection pageType="stage" pageId={current.name} />
+      )}
     </div>
   );
 }

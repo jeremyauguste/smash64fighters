@@ -1,0 +1,316 @@
+.profile-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 3rem;
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--text-primary);
+}
+
+.profile-top-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  margin-bottom: 0.25rem;
+}
+
+.profile-title {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #c8960c;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.profile-identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border: 2px solid #c8960c;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #000;
+}
+
+.profile-display-name {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  margin-bottom: 0.15rem;
+}
+
+.profile-email {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.profile-kudos-total {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #c8960c;
+  letter-spacing: 1px;
+}
+
+/* ── Icon picker ── */
+.profile-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.profile-icon-btn {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  padding: 0;
+  background: var(--bg-panel);
+  border: 2px solid var(--border-panel);
+  cursor: pointer;
+  transition: border-color 0.1s ease;
+}
+
+.profile-icon-btn:hover {
+  border-color: #c8960c;
+}
+
+.profile-icon-btn--active {
+  border-color: #c8960c;
+  outline: 2px solid #c8960c;
+  outline-offset: -2px;
+}
+
+.profile-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-icon-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 2px 0;
+  line-height: 1.4;
+}
+
+/* ── Sections ── */
+.profile-section {
+  background: rgba(10, 10, 10, 0.5);
+  border: 2px solid #222;
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-section--danger {
+  border-color: #4a1010;
+}
+
+.profile-section-title {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #c8960c;
+  letter-spacing: 2px;
+  margin: 0 0 1rem;
+}
+
+.profile-section-title--danger {
+  color: #e05555;
+}
+
+/* ── Username form ── */
+.profile-username-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.profile-input {
+  flex: 1;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.45rem 0.75rem;
+  transition: border-color 0.15s ease;
+}
+
+.profile-input:focus {
+  outline: none;
+  border-color: #c8960c;
+}
+
+/* ── Buttons ── */
+.profile-btn {
+  background: #000;
+  border: 2px solid #c8960c;
+  border-radius: 6px;
+  color: #c8960c;
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+
+.profile-btn:hover:not(:disabled) {
+  background: #1a1400;
+}
+
+.profile-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.profile-btn--danger {
+  border-color: #e05555;
+  color: #e05555;
+}
+
+.profile-btn--danger:hover:not(:disabled) {
+  background: #1a0000;
+}
+
+/* ── Messages ── */
+.profile-success {
+  color: #66bb6a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+}
+
+.profile-error {
+  color: #e05555;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+}
+
+.profile-empty {
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ── Comment history ── */
+.profile-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.profile-comment {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+}
+
+.profile-comment-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+.profile-comment-page {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #c8960c;
+  letter-spacing: 1px;
+}
+
+.profile-comment-time {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.profile-comment-delete {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #555;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.profile-comment-delete:hover {
+  color: #e05555;
+}
+
+.profile-comment-body {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ── Delete confirm ── */
+.profile-delete-warning {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e05555;
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.profile-delete-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .profile-wrapper {
+    padding: 3.5rem 1rem 2rem;
+  }
+
+  .profile-icon-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .profile-username-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
