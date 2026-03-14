@@ -63,14 +63,6 @@
   background: var(--bg-panel-dark);
 }
 
-.ss-square-label {
-  font-family: 'Anton', 'Impact', sans-serif;
-  font-style: italic;
-  font-size: 1.6rem;
-  color: var(--color-accent);
-  line-height: 1;
-}
-
 .ss-square-img {
   width: 100%;
   height: auto;

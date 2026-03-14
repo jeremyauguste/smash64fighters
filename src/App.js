@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Characters from './pages/Characters';
@@ -43,12 +43,6 @@ function AnimatedRoutes() {
 }
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-
-  useEffect(() => {
-    document.body.classList.toggle('theme-light', theme === 'light');
-  }, [theme]);
-
   return (
     <BrowserRouter>
       <AnimatedRoutes />
