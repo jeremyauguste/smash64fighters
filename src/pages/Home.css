@@ -15,7 +15,7 @@
 .home-header {
   font-family: 'Anton', 'Impact', sans-serif;
   font-style: italic;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 6vw, 3rem);
   letter-spacing: 3px;
   color: var(--text-primary);
   text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
@@ -47,7 +47,7 @@
 
 .home-select-title {
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: 2.5rem;
+  font-size: clamp(1.3rem, 5vw, 2.5rem);
   font-style: italic;
   letter-spacing: 2px;
   line-height: 1.1;
@@ -79,8 +79,8 @@
 
 
 .mode-circle {
-  width: 90px;
-  height: 90px;
+  width: clamp(48px, 11vw, 90px);
+  height: clamp(48px, 11vw, 90px);
   border-radius: 50%;
   background: #555555;
   flex-shrink: 0;
@@ -93,7 +93,7 @@
 
 .mode-label {
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: 2.25rem;
+  font-size: clamp(1.2rem, 4.5vw, 2.25rem);
   font-style: italic;
   letter-spacing: 3px;
   color: var(--color-accent);
@@ -104,10 +104,6 @@
 @media (max-width: 600px) {
   .home-header-div {
     padding: 5rem 1rem 1rem;
-  }
-
-  .home-header {
-    font-size: 2rem;
   }
 
   .home-select-group {
@@ -121,7 +117,6 @@
   }
 
   .home-select-title {
-    font-size: 1.8rem;
     padding: 0.4rem 1rem;
   }
 
@@ -134,15 +129,5 @@
   .mode-btn:nth-child(3),
   .mode-btn:nth-child(4) {
     margin-left: 0;
-  }
-
-  .mode-circle {
-    width: 64px;
-    height: 64px;
-  }
-
-  .mode-label {
-    font-size: 1.75rem;
-    letter-spacing: 2px;
   }
 }

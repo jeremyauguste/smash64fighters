@@ -52,6 +52,7 @@ function OwnProfile({ user, signOut }) {
   useEffect(() => {
     fetchComments();
     upsertProfile(user.id, user.user_metadata?.username, currentAvatar);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function fetchComments() {

@@ -36,13 +36,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  width: 140px;
+  padding: 0.25rem 0.75rem;
+  gap: clamp(8px, 2vw, 30px);
   background: #000000;
   border: 2px solid #c8960c;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.15s ease;
-  gap: 30px;
+  white-space: nowrap;
 }
 
 .gallery-nav-btn:hover {
@@ -50,14 +51,14 @@
 }
 
 .gallery-nav-arrows {
-  font-size: 1.1rem;
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
   color: #c8960c;
   line-height: 1;
 }
 
 .gallery-nav-label {
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: 1.3rem;
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
   font-style: italic;
   letter-spacing: 3px;
   color: #c8960c;
