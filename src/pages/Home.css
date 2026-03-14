@@ -1,48 +1,102 @@
-.home {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #1a1a1a;
+.home-select {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.home-hero {
-  text-align: center;
-  padding: 3rem 0 2rem;
-  border-bottom: 2px solid #e0e0e0;
-  margin-bottom: 2rem;
+.home-header-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 1rem;
 }
 
-.home-hero h1 {
-  font-size: 3rem;
-  margin: 0 0 0.5rem;
-  color: #b30000;
-  text-shadow: 2px 2px 0 #ffcc00;
-  letter-spacing: 1px;
-}
-
-.home-tagline {
-  font-size: 1.2rem;
-  color: #555;
-  margin: 0;
+.home-header {
+  font-family: 'Anton', 'Impact', sans-serif;
   font-style: italic;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: var(--text-primary);
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+  margin: 0;
+  text-align: center;
 }
 
-.home-about-game,
-.home-about-site {
-  margin-bottom: 2rem;
+.home-select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.home-about-game h2,
-.home-about-site h2 {
-  font-size: 1.6rem;
-  color: #b30000;
-  margin-bottom: 0.75rem;
+.home-info {
+  max-width: 600px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.75;
+  color: var(--text-secondary);
 }
 
-.home-about-game p,
-.home-about-site p {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 0.75rem;
+.home-select-grid {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  align-items: start;
+  gap: 3rem;
+}
+
+.home-select-title {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: #ffffff;
+  background: #1565c0;
+  padding: 0.5rem 1.25rem;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.home-select-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  grid-column: 2 / 4;
+}
+
+.mode-btn:nth-child(1) { margin-left: 40%; }
+.mode-btn:nth-child(2) { margin-left: 27%; }
+.mode-btn:nth-child(3) { margin-left: 13%; }
+.mode-btn:nth-child(4) { margin-left: 0%;  }
+
+.mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  cursor: pointer;
+}
+
+
+.mode-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #555555;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.mode-circle--hover {
+  background: #c8c8c8;
+}
+
+.mode-label {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: 2.25rem;
+  font-style: italic;
+  letter-spacing: 3px;
+  color: var(--color-accent);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+  user-select: none;
 }

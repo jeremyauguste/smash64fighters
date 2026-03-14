@@ -1,0 +1,61 @@
+.item-row {
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.15s ease, border-radius 0.15s ease;
+}
+
+.item-row:hover {
+  border-color: #c8960c;
+  border-radius: 6px;
+}
+
+.item-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.item-info-btn {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* Height animation using grid trick */
+.item-row-detail-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.item-row-detail-wrapper--open {
+  grid-template-rows: 1fr;
+}
+
+.item-row-detail {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.item-description {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+  flex: 1;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease 0.05s, transform 0.25s ease 0.05s;
+}
+
+.item-row-detail-wrapper--open .item-description {
+  opacity: 1;
+  transform: translateY(0);
+}

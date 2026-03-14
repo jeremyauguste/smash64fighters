@@ -1,10 +1,14 @@
 import React from 'react';
 import './About.css';
+import BackButton from '../components/BackButton';
 
 function About() {
   return (
     <main className="about">
-      <h1>About This Site</h1>
+      <div className="about-top-bar">
+        <h1>About This Site</h1>
+        <BackButton />
+      </div>
 
       <section className="about-section">
         <h2>Purpose</h2>

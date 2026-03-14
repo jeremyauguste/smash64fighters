@@ -1,0 +1,58 @@
+.attack-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.attack-group-title {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  margin: 0 0 0.5rem;
+}
+
+.attack-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.attack-table th {
+  text-align: left;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 0.5rem 0.25rem;
+  border-bottom: 1px solid var(--border-panel);
+}
+
+.attack-table td {
+  padding: 0.2rem 0.5rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.attack-control {
+  font-family: monospace;
+  color: var(--text-muted);
+  white-space: nowrap;
+  width: 1%;
+}
+
+.attack-damage {
+  color: var(--color-accent);
+  font-weight: 700;
+  white-space: nowrap;
+  width: 1%;
+  text-align: right;
+}
+
+.attack-table tr:last-child td {
+  border-bottom: none;
+}

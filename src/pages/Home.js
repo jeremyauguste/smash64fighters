@@ -1,38 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
+
+const pages = [
+  { label: 'CHARACTERS', path: '/characters' },
+  { label: 'STAGES',     path: '/stages' },
+  { label: 'ITEMS',      path: '/items' },
+  { label: 'ABOUT',      path: '/about' },
+];
+
+function ModeButton({ label, path }) {
+  const navigate = useNavigate();
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      className="mode-btn"
+      onClick={() => navigate(path)}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div className={`mode-circle${hovered ? ' mode-circle--hover' : ''}`} />
+      <span className="mode-label">{label}</span>
+    </div>
+  );
+}
 
 function Home() {
   return (
-    <main className="home">
-      <section className="home-hero">
-        <h1>Super Smash Bros. 64</h1>
-        <p className="home-tagline">The original battle royale — 12 fighters, one legendary stage.</p>
-      </section>
-
-      <section className="home-about-game">
-        <h2>About the Game</h2>
-        <p>
-          Released in 1999 for the Nintendo 64, <strong>Super Smash Bros.</strong> introduced
-          a fresh take on the fighting genre. Instead of depleting an opponent's health bar,
-          players must launch their rivals off the stage using damage percentages and powerful
-          knockback attacks. The higher the percentage, the farther you fly.
-        </p>
-        <p>
-          The original roster features 12 iconic Nintendo characters — from Mario and Pikachu
-          to Samus and Jigglypuff — each with a distinct playstyle, weight class, and move set
-          that continues to be studied and celebrated by competitive players today.
-        </p>
-      </section>
-
-      <section className="home-about-site">
-        <h2>About This Site</h2>
-        <p>
-          This site is a character reference guide for <em>Super Smash Bros. 64</em>. Use the
-          <strong> Characters</strong> page to explore every fighter in the original roster —
-          browse stats, learn about move sets, and dive into the lore behind each Nintendo icon.
-        </p>
-      </section>
-    </main>
+    <div className="home-select">
+      <div className="home-header-div">
+        <h2 className="home-header">Super Smash Bros.</h2>
+      </div>
+      <div className="home-select-group">
+        <div className="home-select-grid">
+          <h1 className="home-select-title">PAGE<br />SELECT</h1>
+          <div className="home-select-buttons">
+            {pages.map(p => (
+              <ModeButton key={p.path} label={p.label} path={p.path} />
+            ))}
+          </div>
+        </div>
+        <div className="home-info">
+          <p>A reference guide for the original <strong>Super Smash Bros. 64</strong> roster and stages. Browse all 12 fighters — their move sets, stats, and playstyles — or explore the 9 iconic stages drawn from across Nintendo's most beloved franchises.</p>
+        </div>
+      </div>
+    </div>
   );
 }
 

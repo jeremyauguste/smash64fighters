@@ -1,0 +1,32 @@
+.back-btn {
+  display: inline-flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  background: #000000;
+  border: 2px solid #c8960c;
+  border-radius: 6px;
+  /* padding: 0.25rem 1.75rem; */
+  cursor: pointer;
+  transition: background 0.15s ease;
+  gap: 30px;
+}
+
+.back-btn:hover {
+  background: #1a1400;
+}
+
+.back-arrows {
+  font-size: 1.1rem;
+  color: #c8960c;
+  line-height: 1;
+}
+
+.back-label {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  letter-spacing: 3px;
+  color: #c8960c;
+}
