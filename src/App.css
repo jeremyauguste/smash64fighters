@@ -121,6 +121,34 @@
   animation: page-enter 0.35s ease forwards;
 }
 
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  gap: 1rem;
+}
+
+.not-found-code {
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-style: italic;
+  font-size: 6rem;
+  color: #c8960c;
+  text-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+.not-found-msg {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #aaa;
+  margin: 0 0 0.5rem;
+}
+
 @keyframes page-enter {
   from {
     opacity: 0;

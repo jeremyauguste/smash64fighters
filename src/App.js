@@ -12,6 +12,17 @@ import AuthModal from './components/AuthModal';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
+function NotFound() {
+  const navigate = useNavigate();
+  return (
+    <div className="not-found">
+      <h1 className="not-found-code">404</h1>
+      <p className="not-found-msg">Page not found.</p>
+      <button className="auth-bar-btn" onClick={() => navigate('/')}>GO HOME</button>
+    </div>
+  );
+}
+
 function AnimatedRoutes() {
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -20,7 +31,7 @@ function AnimatedRoutes() {
   const isAbout = location.pathname === '/about';
   const isItems = location.pathname === '/items';
   const isProfile = location.pathname.startsWith('/profile');
-  const showMenuBg = isHome || isAbout;
+  const showMenuBg = isHome || isAbout || (!isChars && !isStages && !isItems && !isProfile);
   const showCharsBg = isChars || isStages || isProfile;
   const [bgReady, setBgReady] = useState(false);
 
@@ -44,6 +55,7 @@ function AnimatedRoutes() {
         <Route path="/items" element={<Items />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/profile/:userId" element={<Profile />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
     </>

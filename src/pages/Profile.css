@@ -254,6 +254,14 @@
   letter-spacing: 1px;
 }
 
+.profile-comment-page--link {
+  text-decoration: none;
+}
+
+.profile-comment-page--link:hover {
+  text-decoration: underline;
+}
+
 .profile-comment-time {
   font-size: 0.8rem;
   color: #555;

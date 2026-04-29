@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import { supabase } from '../supabaseClient';
 import { useAuth } from '../context/AuthContext';
 import BackButton from '../components/BackButton';
@@ -22,6 +22,12 @@ const icons = [
   { name: 'Jigglypuff',     src: '/charIcons/jigglypuff.webp' },
   { name: 'Smash Ball',     src: '/charIcons/smashball.png' },
 ];
+
+function pagePath(comment) {
+  if (comment.page_type === 'item') return '/items';
+  if (comment.page_type === 'stage') return '/stages';
+  return '/characters';
+}
 
 async function upsertProfile(userId, username, avatar) {
   await supabase.from('profiles').upsert({ id: userId, username, avatar });
@@ -187,7 +193,7 @@ function OwnProfile({ user, signOut }) {
             {comments.map(comment => (
               <div key={comment.id} className="profile-comment">
                 <div className="profile-comment-meta">
-                  <span className="profile-comment-page">{pageLabel(comment)}</span>
+                  <Link className="profile-comment-page profile-comment-page--link" to={pagePath(comment)}>{pageLabel(comment)}</Link>
                   <span className="profile-comment-time">{timeAgo(comment.created_at)}</span>
                   <button className="profile-comment-delete" onClick={() => handleDeleteComment(comment.id)}>Delete</button>
                 </div>
@@ -306,7 +312,7 @@ function PublicProfile({ userId }) {
             {comments.map(comment => (
               <div key={comment.id} className="profile-comment">
                 <div className="profile-comment-meta">
-                  <span className="profile-comment-page">{pageLabel(comment)}</span>
+                  <Link className="profile-comment-page profile-comment-page--link" to={pagePath(comment)}>{pageLabel(comment)}</Link>
                   <span className="profile-comment-time">{timeAgo(comment.created_at)}</span>
                 </div>
                 <p className="profile-comment-body">{comment.body}</p>
